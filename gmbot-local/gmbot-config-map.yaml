@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: gmbot-config-map
-data:
-  CHROMA_HOST: "vector-store"
-  CHROMA_PORT: "8000"
-  LANGSMITH_TRACING: "true"
-  ENV: "prod"

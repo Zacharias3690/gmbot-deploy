@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: gmbot-web
-  name: gmbot-web
+  name: gmbot-web-lb
 spec:
   ports:
     - name: "8080"

@@ -4,6 +4,7 @@ metadata:
   annotations:
     kompose.cmd: kompose convert
     kompose.version: 1.35.0 (HEAD)
+    gke-gcsfuse/volumes: "true"
   labels:
     io.kompose.service: vector-store
   name: vector-store

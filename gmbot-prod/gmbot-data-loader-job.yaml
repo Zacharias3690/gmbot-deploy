@@ -2,6 +2,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: gmbot-data-loader
+  labels:
+    app.kubernetes.io/instance: gmbot-prod
 spec:
   template:
     spec:

@@ -3,6 +3,7 @@ kind: Service
 metadata:
   labels:
     app: gmbot-web
+    app.kubernetes.io/instance: gmbot-prod
   name: gmbot-web-lb
 spec:
   ports:

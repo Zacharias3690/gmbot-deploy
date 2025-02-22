@@ -6,6 +6,7 @@ metadata:
     kompose.version: 1.35.0 (HEAD)
   labels:
     io.kompose.service: gmbot-web
+    app.kubernetes.io/instance: gmbot-prod
   name: gmbot-web
 spec:
   replicas: 1

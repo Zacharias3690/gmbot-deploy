@@ -4,6 +4,8 @@ metadata:
     name: gmbot-rw-pv
     annotations:
         gke-gcsfuse/volumes: "true"
+    labels:
+        app.kubernetes.io/instance: gmbot-prod
 spec:
     accessModes:
         -   ReadWriteMany

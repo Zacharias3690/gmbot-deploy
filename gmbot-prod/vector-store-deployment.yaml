@@ -26,4 +26,14 @@ spec:
           ports:
             - containerPort: 8000
               protocol: TCP
+          volumeMounts:
+            - name: gmbot-pv-static
+              mountPath: /chroma/chroma
+              readOnly: false
+      serviceAccountName: gmbot-service-account
+      volumes:
+        - name: gmbot-pv-static
+          persistentVolumeClaim:
+            claimName: gmbot-rw-pvc
+            readOnly: false
       restartPolicy: Always

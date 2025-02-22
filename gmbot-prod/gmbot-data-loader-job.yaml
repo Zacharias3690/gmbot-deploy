@@ -8,7 +8,7 @@ spec:
   template:
     spec:
       containers:
-        - image: us-central1-docker.pkg.dev/gmbot-451416/gm-bot-images/gmbot-data-loader:0.0.4
+        - image: us-central1-docker.pkg.dev/gmbot-451416/gm-bot-images/gmbot-data-loader:0.0.5
           name: gmbot-data-loader
           envFrom:
             - configMapRef:

@@ -30,6 +30,7 @@ spec:
           volumeMounts:
             - mountPath: /app/game_data
               name: gmbot-game-data
+              readOnly: false
       serviceAccountName: gmbot-service-account
       volumes:
         - name: gmbot-game-data

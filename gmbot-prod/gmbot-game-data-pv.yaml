@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: gmbot-game-data-pv
+  labels:
+    app.kubernetes.io/instance: gmbot-prod
+spec:
+  accessModes:
+    - ReadOnlyMany
+  capacity:
+    storage: 5Gi
+  storageClassName: gmbot-game-data-storage-class
+  mountOptions:
+    - implicit-dirs
+  csi:
+    driver: gcsfuse.csi.storage.gke.ioo
+    volumeHandle: gmbot_game_data
+  claimRef:
+    name: gmbot-game-data-pvc
+    namespace: default

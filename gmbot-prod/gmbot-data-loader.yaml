@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gmbot-data-loader
+  labels:
+    app.kubernetes.io/instance: gmbot-prod
+    app: gmbot-data-loader
+spec:
+  selector:
+    matchLabels:
+      app: gmbot-data-loader
+  template:
+    metadata:
+      labels:
+        app: gmbot-data-loader
+    spec:
+      containers:
+        - image: us-central1-docker.pkg.dev/gmbot-451416/gm-bot-images/gmbot-data-loader:0.0.6
+          name: gmbot-data-loader
+          envFrom:
+            - configMapRef:
+                name: gmbot-config-map
+            - secretRef:
+                name: gmbot-secrets
+      serviceAccountName: gmbot-service-account
+      volumes:
+        - name: gmbot-game-data
+          persistentVolumeClaim:
+            claimName: gmbot-game-data-pvc
+            readOnly: true
+      restartPolicy: Always

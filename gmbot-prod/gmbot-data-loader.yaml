@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gmbot-data-loader
+  annotations:
+    gke-gcsfuse/volumes: "true"
   labels:
     app.kubernetes.io/instance: gmbot-prod
     app: gmbot-data-loader

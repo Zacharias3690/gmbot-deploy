@@ -13,7 +13,7 @@ spec:
   mountOptions:
     - implicit-dirs
   csi:
-    driver: gcsfuse.csi.storage.gke.ioo
+    driver: gcsfuse.csi.storage.gke.io
     volumeHandle: gmbot_game_data
   claimRef:
     name: gmbot-game-data-pvc

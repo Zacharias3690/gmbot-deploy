@@ -35,5 +35,5 @@ spec:
         - name: gmbot-game-data
           persistentVolumeClaim:
             claimName: gmbot-game-data-pvc
-            readOnly: true
+            readOnly: false
       restartPolicy: Always

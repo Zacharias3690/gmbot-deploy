@@ -15,8 +15,9 @@ spec:
         app: gmbot-data-loader
     spec:
       containers:
-        - image: us-central1-docker.pkg.dev/gmbot-451416/gm-bot-images/gmbot-data-loader:0.0.6
+        - image: us-central1-docker.pkg.dev/gmbot-451416/gm-bot-images/gmbot-data-loader:0.0.7
           name: gmbot-data-loader
+          tty: true
           envFrom:
             - configMapRef:
                 name: gmbot-config-map

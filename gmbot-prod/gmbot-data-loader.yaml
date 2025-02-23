@@ -17,12 +17,14 @@ spec:
       containers:
         - image: us-central1-docker.pkg.dev/gmbot-451416/gm-bot-images/gmbot-data-loader:0.0.7
           name: gmbot-data-loader
-          tty: true
           envFrom:
             - configMapRef:
                 name: gmbot-config-map
             - secretRef:
                 name: gmbot-secrets
+          volumeMounts:
+            - mountPath: /app/game_data
+              name: gmbot-game-data
       serviceAccountName: gmbot-service-account
       volumes:
         - name: gmbot-game-data

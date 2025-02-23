@@ -8,7 +8,7 @@ metadata:
         app.kubernetes.io/instance: gmbot-prod
 spec:
     accessModes:
-        -   ReadWriteMany
+        - ReadWriteMany
     capacity:
         storage: 5Gi
     storageClassName: gmbot-rw-storage-class

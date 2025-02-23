@@ -19,7 +19,7 @@ spec:
         gke-gcsfuse/volumes: "true"
     spec:
       containers:
-        - image: us-central1-docker.pkg.dev/gmbot-451416/gm-bot-images/gmbot-data-loader:0.0.8
+        - image: us-central1-docker.pkg.dev/gmbot-451416/gm-bot-images/gmbot-data-loader:0.0.9
           name: gmbot-data-loader
           tty: true
           envFrom:
